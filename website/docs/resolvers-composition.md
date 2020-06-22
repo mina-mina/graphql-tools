@@ -22,7 +22,7 @@ const resolvers ={
             }
 
             // Make sure that the user has the correct roles
-            if (!context.currentUser.roles || context.currentUser.roles.includes('EDITOR')) {
+            if (!context.currentUser.roles || !context.currentUser.roles.includes('EDITOR')) {
                 throw new Error('You are not authorized!');
             }
 
